@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/get-cookie', (req, res) => {
-  res.cookie('SESSION_ID', '5555555555555555555555555555555555555');
+  res.cookie('SESSION_ID', '5555555555555555555555555555555555555', { secure: true, sameSite: 'None', httpOnly: true });
   res.redirect(clientOrigin)
 })
 
